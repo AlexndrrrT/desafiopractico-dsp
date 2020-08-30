@@ -85,7 +85,7 @@
 
     <div class="form-group">
       <label for="exampleSelect1">Tratamiento realizado:</label>
-      <select class="form-control" id="exampleSelect1">
+      <select class="form-control" id="Select1">
         <option>Consulta General</option>
         <option>Cirugia Pequeña</option>
         <option>Cirugia Extensa</option>
@@ -96,11 +96,12 @@
 
     <br>
 
-    <fieldset class="form-group">
+
+    <fieldset class="form-group" id="Select2">
       <legend>Precio</legend>
       <div class="form-check">
         <label class="form-check-label">
-          <input class="form-check-input" type="checkbox" value="" checked="">  $4.99
+          <input class="form-check-input" type="checkbox" value="" enabled="">  $4.99
         </label>
       </div>
       <div class="form-check">
@@ -127,7 +128,40 @@
 
     <br>
 
-    <button type="submit" class="btn btn-primary" style="text-align: center;">Guardar reporte</button>
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+  Guardar
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">¿Guardar los cambios?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Nombre del dueño ingresado:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{name}</p>
+
+        <p>DUI del dueño ingresado:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;{id}</p>
+
+        <p>Nombre de la mascota ingresado:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{name2}</p>
+
+        <p>Tratamiento a realizar:&nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{Select1}</p>
+
+        <p>Precio del tratamiento/s a realizar:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{Select2}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">No, deseo corregir</button>
+        <button type="button" class="btn btn-primary">Si, los datos estan correctos</button>
+      </div>
+    </div>
+  </div>
+</div>
+
   </fieldset>
 </form>
 
